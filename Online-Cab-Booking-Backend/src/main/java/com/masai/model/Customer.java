@@ -60,7 +60,7 @@ public class Customer implements UserDetails , CredentialsContainer {
 			set.add(new SimpleGrantedAuthority(roles.getName()));
 		}
 		
-		return null;
+		return set;
 	}
 
 	@Override
