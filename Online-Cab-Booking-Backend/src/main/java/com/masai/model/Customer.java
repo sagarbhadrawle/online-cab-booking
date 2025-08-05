@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonProperty.Access;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -22,7 +23,14 @@ import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@Entity
+@Getter
+@Setter
+@NoArgsConstructor
 public class Customer implements UserDetails , CredentialsContainer {
 
 	@jakarta.persistence.Id
@@ -62,7 +70,7 @@ public class Customer implements UserDetails , CredentialsContainer {
 		
 		return set;
 	}
-
+	
 	@Override
 	public String getPassword() {
 		// TODO Auto-generated method stub
@@ -72,13 +80,22 @@ public class Customer implements UserDetails , CredentialsContainer {
 	@Override
 	public String getUsername() {
 		// TODO Auto-generated method stub
-		return null;
+		return getEmail();
 	}
 
 	@Override
 	public void eraseCredentials() {
 		// TODO Auto-generated method stub
-		
+		this.password=null;
+	}
+
+	public Customer(String name, String password, String email,String contact,Set<RolesAndAuthority> roleAndAuthority) {
+		super();
+		this.name = name;
+		this.password = password;
+		this.email = email;
+		this.contact = contact;
+		this.roleAndAuthority = roleAndAuthority;
 	}
 
 }
