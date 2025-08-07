@@ -28,7 +28,7 @@ public class Booking {
 	private Integer Id;
 	
 	@JsonIgnore
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne(cascade = CascadeType.REMOVE)
 	@JoinColumn(name="customer_id")
 	Customer customer;
 
