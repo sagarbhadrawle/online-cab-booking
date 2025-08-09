@@ -53,7 +53,7 @@ public class CabController {
 		cabService.deleteCab(id);
 		return new ResponseEntity<>("Cab deleted successfully", HttpStatus.OK);
 
-	
+	}
 
 
 	@GetMapping("/cabs/available")
