@@ -16,5 +16,7 @@ public interface CustomerService {
 	public Booking updateBooking(Integer bookingId, Booking updatedBooking);
 
 	public List<Booking> getBookingHistory(Integer customerId);
-
+	
+	public Customer getCustomerByID(String email);
+	
 }

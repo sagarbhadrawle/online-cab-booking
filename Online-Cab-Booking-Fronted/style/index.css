@@ -1,0 +1,40 @@
+
+
+body{
+    box-sizing:border-box
+}
+
+body{
+    padding:0px;
+    margin:0px;
+
+}
+
+.nav{
+
+border: 1px solid red;
+display: flex;
+flex-direction: row-reverse;
+
+
+}
+
+#main{
+
+    
+    margin: auto;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+#main div{
+    
+    
+}
+#imgtag{
+
+    width: 49%;
+}

@@ -1,0 +1,214 @@
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./style/sigup.css" />
+    <style>
+        body {
+            font-family: open sans, -apple-system, BlinkMacSystemFont, segoe ui, Roboto, helvetica neue, Arial, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol;
+            font-size: .875rem;
+            font-weight: 400;
+            line-height: 1.3571428571;
+            color: #000;
+        
+        }
+        #registerForm{
+            width: 30%;
+            margin: auto;
+        }
+       
+        form{
+           
+
+
+        }
+    </style>
+</head>
+
+<body>
+  <div id="registerForm">
+
+            <form>
+                <p>Create An Account</p>
+                <input type="text" placeholder="Name*" id="name">
+                <br>
+                <br>
+                <input type="text" placeholder="Phone*" id="phone" maxlength="10">
+                <br>
+                <br>
+                <input type="email" placeholder="Email*" id="email">
+                <br>
+                <br>
+                <input type="password" placeholder="Password*" id="password">
+                <br>
+                <br>
+                <input type="submit" value="submit" id="apply">
+            </form>
+                
+                
+              
+                
+                
+              
+                
+
+                
+                
+                
+                
+                
+                
+
+      
+</body>
+
+</html>
+
+
+<script>
+    // function openForm(evt, FormName) {
+    //     var i, tabcontent, tablinks;
+    //     tabcontent = document.getElementsByClassName("tabcontent");
+    //     for (i = 0; i < tabcontent.length; i++) {
+    //         tabcontent[i].style.display = "none";
+    //     }
+    //     tablinks = document.getElementsByClassName("tablinks");
+    //     for (i = 0; i < tablinks.length; i++) {
+    //         tablinks[i].className = tablinks[i].className.replace(" active", "");
+    //     }
+    //     document.getElementById(FormName).style.display = "block";
+    //     evt.currentTarget.className += " active";
+    // }
+
+
+    // document.getElementById("defaultOpen").click();
+    // var array = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    // let select = document.getElementById("B_Month");
+    // let select2 = document.getElementById("B_Day");
+    // for (let index = 0; index < array.length; index++) {
+    //     const element = array[index];
+    //     let ele = document.createElement("option")
+
+    //     ele.innerText = `${index + 1}-${element}`;
+
+    //     select.appendChild(ele)
+    // }
+    // for (let index = 1; index <= 31; index++) {
+
+    //     let ele2 = document.createElement("option");
+    //     ele2.innerText = index;
+    //     select2.appendChild(ele2)
+    // }
+    // let email = document.getElementById("email");
+    // let pass = document.getElementById("password");
+    // let items = document.querySelectorAll(".focus_input")
+    // //console.log(items);
+    // items.forEach((el) => {
+    //     el.addEventListener("focusout", (e) => {
+    //         if (e.target.value == "") {
+    //             console.log(e.target.id);
+    //             document.getElementById(`${e.target.id}-error`).style.display = "block"
+    //             document.getElementById(`${e.target.id}_warning`).innerText = `Please Enter Your ${e.target.id}`;
+    //         }
+    //         else {
+    //             console.log(e.target.id);
+    //             document.getElementById(`${e.target.id}-error`).style.display = "none"
+    //             document.getElementById(`${e.target.id}_warning`).innerText = "";
+    //         }
+    //     })
+    // })
+    
+   
+   
+
+</script>
+<script src="./scripts/signup.js"></script> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Register</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./style/index.css" />
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./styles/style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    #registerForm {
+      width: 30%;
+      margin: auto;
+      margin-top: 100px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 10px;
+    }
+
+    input[type="submit"] {
+      background-color: green;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid container">
+          <a class="navbar-brand" href="./index.html">
+            <img src="./images/logo.png" alt="Logo" width="50" height="50">
+          </a>
+  
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+              <a class="nav-link" href="./bookRide.html">BookRide</a>
+              <a class="nav-link" href="./cancelBooking.html">CancelRide</a>
+              <a class="nav-link" href="./viewbooking.html">ViewBooking</a>
+          
+            </div>
+      
+            <div class="navbar-nav">
+              <a class="nav-link" href="./login.html">Login</a>
+              <a class="nav-link" href="./signup.html">Signup</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+
+
+  <div id="registerForm">
+    <form id="registerFormElem">
+      <p><strong>Create an Account</strong></p>
+      <input type="text" placeholder="Name*" id="name" required />
+      <input type="text" placeholder="Phone*" id="phone" maxlength="10" required />
+      <input type="email" placeholder="Email*" id="email" required />
+      <input type="password" placeholder="Password*" id="password" required />
+      <input type="submit" value="Register" />
+    </form>
+  </div>
+
+  <script src="./script/signup.js"></script>
+</body>
+
+</html>

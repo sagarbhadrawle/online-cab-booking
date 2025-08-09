@@ -1,0 +1,167 @@
+     /* Style the tab */
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            /* background-color: #f1f1f1; */
+            justify-content: space-around;
+            display: flex;
+        }
+
+        /* Style the buttons inside the tab */
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        /* Create an active/current tablink class */
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+
+
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="number"] {
+            height: 50px;
+            width: 94%
+        }
+
+        .form_control div {
+            padding: 10px;
+        }
+
+        .form_section {
+            display: grid;
+            grid-template-columns: repeat(1, 500px);
+            justify-content: center;
+            /* gap: 20px */
+            background-color:#aca7ae;
+        }
+
+        .form_section button {
+            color: #737373;
+            background-color: #fff;
+            border-color: #737373;
+            letter-spacing: 0;
+            text-decoration: none;
+            text-transform: uppercase;
+            text-rendering: optimizeLegibility;
+            padding: 0.75rem 3rem;
+            font-size: .75rem;
+            line-height: .9;
+            border-radius: 0;
+            width: 95%;
+        }
+
+      
+
+
+        #Birth_data select {
+            height: 50px;
+            width: 45%;
+        }
+
+        #Birth_data {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+
+        
+
+        .month-label {
+
+            margin-right: 40PX;
+            font-size: 0.900rem;
+            MARGIN-LEFT: 10PX;
+            POSITION: absolute;
+            MARGIN-TOP: -14PX;
+            transition: .25s;
+            color: #000;
+            background-color: #fff;
+            padding: 0 0.25rem;
+            pointer-events: none;
+        }
+
+        .day {
+            MARGIN-LEFT: 325PX;
+        }
+
+        .image_container {
+            /* // background-color: black; */
+            /* // height: 200px; */
+            text-align: center;
+        }
+
+        .Reward_Container {
+            background-color: rgb(255, 255, 255);
+            font-size: 13px;
+        }
+
+        #order-ex {
+            font-size: .625rem;
+            margin-top: -15px;
+            margin-left: 27px;
+            text-align: left;
+        }
+
+        .error-image {
+            display: none;
+            float: right;
+            margin-left: -44px;
+        }
+
+        .error-image img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .email-input {
+            display: flex;
+        }
+
+        #feedback_warning {
+            font-size: .625rem;
+            margin-top: -14px;
+        }
+
+        .warning-below {
+            margin-top: -10px;
+            font-size: .625rem;
+            color: red;
+        }
+
+        #Login {
+            height: 800px
+        }
+
+        @media only screen and (max-width: 1195px) {
+            .form_section {
+                display: grid;
+                grid-template-columns: repeat(1, auto);
+                grid-template-rows: repeat(2, auto);
+                justify-content: center;
+                gap: 20px
+            }
+        }

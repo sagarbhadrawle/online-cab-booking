@@ -52,7 +52,7 @@ public class Booking {
 	 @Enumerated(EnumType.STRING)
 	private BookingStatus status;
 	 
-	 private LocalDateTime dateTime;
+//	 private LocalDateTime dateTime;
 
 	 public Booking(com.masai.model.Customer customer, Cab cabs, @NotNull String source, @NotNull String destination,
 			@NotNull Double distance, Double totalAmount, BookingStatus status, LocalDateTime dateTime) {
@@ -64,7 +64,7 @@ public class Booking {
 		this.distance = distance;
 		this.totalAmount = totalAmount;
 		this.status = status;
-		this.dateTime = dateTime;
+		
 	 }
 	 
 	 

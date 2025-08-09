@@ -52,7 +52,7 @@ public class BookingServiceImp implements BookingService {
 	        booking.setCustomer(customer);
 	        booking.setCabs(cab);
 	        booking.setStatus(BookingStatus.CONFIRMED);
-	        booking.setDateTime(LocalDateTime.now());
+	        
 
 	        // Calculate total amount
 	        booking.setTotalAmount(cab.getPerKmRate() * booking.getDistance());

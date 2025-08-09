@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.stereotype.Service;
 
 import com.masai.exception.BookingNotFoundException;
+import com.masai.exception.CustomerNotFoundException;
 import com.masai.exception.SomethingWentWrong;
 import com.masai.model.Booking;
 import com.masai.model.Customer;
@@ -79,7 +80,7 @@ public class CustomerServiceImpl implements CustomerService {
 		    existing.setDistance(updatedBooking.getDistance());
 		    existing.setStatus(updatedBooking.getStatus());
 		    existing.setTotalAmount(updatedBooking.getTotalAmount());
-		    existing.setDateTime(updatedBooking.getDateTime());
+		    
 
 		    return bookrepo.save(existing);
 		
@@ -94,6 +95,19 @@ public class CustomerServiceImpl implements CustomerService {
 	    }
 
 	    return bookrepo.getBookingsByCustomerId(customerId);
+	}
+
+	@Override
+	public Customer getCustomerByID(String email) {
+		
+		Optional<Customer> byEmail = customerRespo.findByEmail(email);
+
+		if(byEmail.isPresent())
+		{
+			return  byEmail.get();
+		}
+		 
+		throw new CustomerNotFoundException("No customer with given email id "+email);
 	}
 
 }

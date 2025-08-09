@@ -17,7 +17,7 @@ import com.masai.model.Booking;
 import com.masai.service.BookingService;
 
 @RestController
-@CrossOrigin("*")
+
 public class BookingController {
 	
 	private BookingService bookingService;

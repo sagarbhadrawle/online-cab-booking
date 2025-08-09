@@ -4,8 +4,8 @@ import java.util.List;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,7 +20,8 @@ import com.masai.service.BookingService;
 import com.masai.service.CustomerService;
 
 @RestController
-@CrossOrigin("*")
+
+
 public class CustomerController {
 	private BookingService bookingService;
 	private CustomerService customerService;
@@ -50,7 +51,13 @@ public class CustomerController {
 		return new ResponseEntity<Customer>(cust, HttpStatus.CREATED);
 	}
 	
-	
+	@GetMapping("/auth/login")
+	public ResponseEntity<Customer> getCustomerById(Authentication auth) {
+		
+		Customer cust = customerService.getCustomerByID(auth.getName());
+		
+		return new ResponseEntity<Customer>(cust,HttpStatus.ACCEPTED);
+	}
 	
 	
 	@GetMapping("/welcome")
