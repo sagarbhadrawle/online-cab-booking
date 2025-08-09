@@ -17,7 +17,7 @@ import com.masai.model.Cab;
 import com.masai.service.CabService;
 
 @RestController
-@CrossOrigin("*")
+
 public class CabController {
 
 	private CabService cabService;
@@ -52,7 +52,9 @@ public class CabController {
 	public ResponseEntity<String> deleteCab(@PathVariable Integer id) {
 		cabService.deleteCab(id);
 		return new ResponseEntity<>("Cab deleted successfully", HttpStatus.OK);
-	}
+
+	
+
 
 	@GetMapping("/cabs/available")
 	public ResponseEntity<List<Cab>> getAvailableCabs() {
