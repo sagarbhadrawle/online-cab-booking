@@ -105,7 +105,8 @@ console.log(localStorage.getItem("login"));
         .then((data) => {
             alert("Booking successful!");
             console.log("Booking details:", data);
-            form.reset();
+            localStorage.setItem("booking",JSON.stringify(data))
+            // form.reset();
         })
         .catch((err) => {
             console.error(err);

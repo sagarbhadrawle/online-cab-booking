@@ -9,13 +9,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const email = loginData.email;
   const password = loginData.password;
 
+
   const credentials = btoa(`${email}:${password}`);
 
-  fetch(`http://localhost:8080/booking/${userId}`, {
+  const booking = JSON.parse(localStorage.getItem("booking"));
+
+  
+  const bookingid = booking.id;
+
+  fetch(`http://localhost:8080/viewBooking/${bookingid}`, {
     method: "GET",
-    headers: {
-      Authorization: `Basic ${credentials}`,
-    },
+    // headers: {
+    //   Authorization: `Basic ${credentials}`,
+    // },
   })
     .then((res) => {
       if (!res.ok) throw new Error("Failed to fetch bookings.");
@@ -23,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .then((data) => {
       const tbody = document.querySelector("#bookingTable tbody");
+      console.log(data)
       tbody.innerHTML = "";
 
       if (data.length === 0) {
@@ -30,10 +37,10 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      data.forEach((booking) => {
+        const booking = data;
         const row = document.createElement("tr");
         row.innerHTML = `
-          <td>${booking.bookingId}</td>
+          <td>${booking.id}</td>
           <td>${booking.source}</td>
           <td>${booking.destination}</td>
           <td>${booking.distance}</td>
@@ -42,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <td>${booking.cabId}</td>
         `;
         tbody.appendChild(row);
-      });
+     
     })
     .catch((err) => {
       console.error(err);
