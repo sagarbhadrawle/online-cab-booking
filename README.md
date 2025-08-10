@@ -1,6 +1,7 @@
 # 🚖 Online Cab Booking System
 
-![Online Cab Booking Logo](https://raw.githubusercontent.com/sagarbhadrawle/Online-Cab-Booking/main/images/logo.png)
+![Online Cab Booking Logo](https://raw.githubusercontent.com/sagarbhadrawle/online-cab-booking/main/Online-Cab-Booking-Fronted/images/logo.png)
+
 
 ## 📖 Overview
 The **Online Cab Booking System** is a Spring Boot application that allows customers to book cabs, track booking status, and manage driver and cab availability.  
