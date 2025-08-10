@@ -19,6 +19,15 @@ flex-direction: row-reverse;
 
 }
 
+@media (max-width: 768px) {
+  #imgtag,
+  img[alt="Our Service"] {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
 #main{
 
     

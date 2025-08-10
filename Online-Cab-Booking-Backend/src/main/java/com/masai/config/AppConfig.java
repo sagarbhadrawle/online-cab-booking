@@ -48,6 +48,7 @@ public class AppConfig {
 					auth -> auth.requestMatchers(HttpMethod.POST, "/customers").permitAll()
 					.requestMatchers(HttpMethod.POST,"/cabs", "/booking/*/*").permitAll()
 					.requestMatchers(HttpMethod.DELETE,"booking/*").permitAll()
+					.requestMatchers(HttpMethod.GET,"viewBooking/*").permitAll()
 					.requestMatchers("/swagger-ui*/**","/v3/api-docs/**").permitAll()
 					.anyRequest().authenticated())
 			.csrf(c -> c.disable())
